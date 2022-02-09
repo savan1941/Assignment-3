@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#nav {
+  display: flex;
+  height: 170px;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  padding: 50px;
+  width: 70%;
+  margin: auto;
+}
+
+#daydate {
+  display: flex;
+}
+#mmyr {
+  display: flex;
+  color: silver;
+}
+
+#day {
+  font-size: 50px;
+}
+#right {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+#main {
+  display: flex;
+  width: 800px;
+  margin: auto;
+  box-shadow: 0px 0px 20px silver;
+  border: 2px solid silver;
+  border-radius: 10px;
+}
+
+#divtemp {
+  display: flex;
+}
+#weather {
+  display: flex;
+  align-items: center;
+}
+#temprature {
+  font-size: 25px;
+}
+#cityin {
+  margin-left: 7px;
+}
+#places {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  align-content: center;
+  margin-left: 10px;
+  border-right: 2px solid silver;
+}
+.labels {
+  color: rgb(149, 147, 147);
+  margin-left: 5px;
+}
+label {
+  color: red;
+  margin-left: 5px;
+}
+#dropdate {
+  width: 150px;
+  font-size: 17px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  outline: none;
+}
+#dropdown {
+  font-size: 17px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+  outline: none;
+}
+#week {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+  border-right: 2px solid silver;
+}
+#date {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 10px;
+  border-right: 2px solid silver;
+}
+#search {
+  padding: 10px;
+  width: 100px;
+  display: flex;
+}
+#icon {
+  padding: 10px;
+  width: 100px;
+  /* align-items: center; */
+  justify-content: center;
+  display: flex;
+  border-right: 2px solid silver;
+}
+#slider {
+  font-size: 25px;
+}
+#searchbutton {
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  border-color: red;
+  display: flex;
+  margin: auto;
+}
+
+.dropbtn {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 17px;
+
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.dropdowncontent {
+  display: none;
+  position: absolute;
+  top: 116px;
+  /* background-color: #f1f1f1; */
+  z-index: 1;
+  background: white;
+}
+
+.dropdowncontent a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-bottom: 1px solid silver;
+  /* margin-top: 0px; */
+  display: block;
+  /* border-bottom: 1px solid black; */
+}
+.dropdowncontent a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+.dropadd {
+  height: 204px;
+  overflow-y: scroll;
+}
+
+.dropadd div {
+  color: black;
+  padding: 8px 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.dropadd div:hover {
+  background-color: #ddd;
+}
+
+/* container section */
+#container {
+  width: 90%;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#card {
+  width: 400px;
+  border: 2px solid silver;
+  box-shadow: 0px 0px 20px silver;
+  margin: 10px;
+  border-radius: 10px;
+}
+#placename {
+  margin: 10px;
+}
+#bookmarks {
+  float: right;
+  margin: 10px;
+}
+#cardtemp {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+#line {
+  width: 30px;
+  border: 1px solid black;
+}
+#tempinc {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+img {
+  width: 375px;
+  height: 250px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+button {
+  /* margin: 10px; */
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 8px;
+}
+#bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+#silverfont {
+  color: rgb(149, 147, 147);
+}
+#card:hover {
+  transform: scale(1.03);
+}
+button:hover {
+  border: 1px solid black;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 2560px) {
+  body {
+    font-size: 25px;
+  }
+  #nav {
+    width: 80%;
+  }
+  #container {
+    width: 90%;
+  }
+  #main {
+    width: 1000px;
+  }
+  #places {
+    width: 300px;
+  }
+  #week {
+    width: 300px;
+  }
+  #date {
+    width: 300px;
+  }
+  .dropbtn {
+    font-size: 24px;
+  }
+  #dropdown {
+    font-size: 22px;
+  }
+  .dropbtn {
+    font-size: 24px;
+  }
+  #dropdown {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 2333px) {
+  #nav {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 2270px) {
+  #nav {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 2080px) {
+  #nav {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1866px) {
+  #nav {
+    width: 70%;
+  }
+  #main {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 1866px) {
+  #nav {
+    width: 75%;
+  }
+  #main {
+    width: 800px;
+  }
+  #places {
+    width: 200px;
+  }
+  #week {
+    width: 200px;
+  }
+  #date {
+    width: 200px;
+  }
+  .dropbtn {
+    font-size: 20px;
+  }
+  #dropdown {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1708px) {
+  #nav {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1708px) {
+  #nav {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 1480px) {
+  #nav {
+    width: 88%;
+  }
+}
+@media only screen and (max-width: 1420px) {
+  #nav {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1374px) {
+  body {
+    font-size: 20px;
+  }
+  #nav {
+    flex-wrap: wrap;
+  }
+  #daydate {
+    order: 1;
+    width: 200px;
+  }
+
+  #week {
+    width: 200px;
+  }
+  #date {
+    width: 200px;
+  }
+  #weather {
+    order: 2;
+  }
+  #main {
+    order: 3;
+  }
+  .dropdowncontent {
+    top: 171px;
+  }
+}
+@media only screen and (max-width: 933px) {
+  #nav {
+    /* flex-direction: column; */
+    width: 50%;
+  }
+  #main {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+  }
+  #container {
+    margin-top: 200px;
+  }
+  #places {
+    border-bottom: 2px solid silver;
+    border-right: none;
+    width: 100%;
+    align-items: center;
+    margin-left: 0px;
+  }
+  #week {
+    border-bottom: 2px solid silver;
+    border-right: none;
+    width: 100%;
+    align-items: center;
+    margin-left: 0px;
+  }
+  #date {
+    border-bottom: 2px solid silver;
+    border-right: none;
+    width: 100%;
+    align-items: center;
+    margin-left: 0px;
+  }
+  #icon {
+    border-bottom: 2px solid silver;
+    border-right: none;
+    width: 100%;
+  }
+  #search {
+    align-items: center;
+    width: 100%;
+  }
+  #dropdate {
+    margin-left: 54px;
+  }
+  .dropbtn {
+    margin-left: 25px;
+  }
+  .dropdowncontent {
+    top: 157px;
+    width: 131px;
+  }
+}
+@media only screen and (max-width: 930px) {
+  /* #container {
+    margin-top: 240px;
+  } */
+  #daydate {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 915px) {
+  #container {
+    margin-top: 250px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  #daydate {
+    width: 169px;
+  }
+}
+
+@media only screen and (max-width: 868px) {
+  #daydate {
+    width: 164px;
+  }
+}
+@media only screen and (max-width: 868px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  #daydate {
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 832px) {
+  #daydate {
+    width: 159px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  #daydate {
+    width: 131px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  #container {
+    margin-top: 250px;
+  }
+  #weather {
+    padding: 10px;
+  }
+  .dropdowncontent {
+    top: 221px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #nav {
+    width: 59%;
+  }
+}
+@media only screen and (max-width: 521px) {
+  #dropdate {
+    width: 100px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 521px) {
+  #nav {
+    width: 84%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #card {
+    width: 270px;
+  }
+  img {
+    width: 267px;
+    height: 200px;
+  }
+  #cardtemp {
+    margin-top: 20px;
+  }
+  .dropbtn {
+    font-size: 18px;
+  }
+  #dropdown {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #card {
+    width: 224px;
+  }
+  img {
+    width: 221px;
+    height: 173px;
+  }
+  #cardtemp {
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #nav {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #nav {
+    width: 100%;
+  }
+}
